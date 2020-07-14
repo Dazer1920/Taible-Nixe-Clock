@@ -17574,6 +17574,35 @@ TS-003</description>
 <vertex x="2.5654" y="3.937"/>
 </polygon>
 </package>
+<package name="TSSOP-20">
+<smd name="1" x="-2.54" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="2" x="-1.89" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="3" x="-1.24" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="4" x="-0.59" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="5" x="0.06" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="6" x="0.71" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="7" x="1.36" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="8" x="2.01" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="9" x="2.66" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="10" x="3.31" y="-3.04" dx="0.4" dy="1.35" layer="1"/>
+<smd name="11" x="3.31" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<smd name="12" x="2.66" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<smd name="13" x="2.01" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<smd name="14" x="1.36" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<smd name="15" x="0.71" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<smd name="16" x="0.06" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<smd name="17" x="-0.59" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<smd name="18" x="-1.24" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<smd name="19" x="-1.89" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<smd name="20" x="-2.54" y="3.16" dx="0.4" dy="1.35" layer="1"/>
+<wire x1="-2.865" y1="2.185" x2="-2.865" y2="-2.065" width="0.15" layer="21"/>
+<wire x1="-2.865" y1="-2.065" x2="3.635" y2="-2.065" width="0.15" layer="21"/>
+<wire x1="3.635" y1="-2.065" x2="3.635" y2="2.185" width="0.15" layer="21"/>
+<wire x1="3.635" y1="2.185" x2="-2.865" y2="2.185" width="0.15" layer="21"/>
+<circle x="-2.215" y="-1.415" radius="0.325" width="0.15" layer="21"/>
+<text x="-2.865" y="4.135" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.865" y="-5.315" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <packages3d>
 <package3d name="SO08-0.15" urn="urn:adsk.eagle:package:37522/1" type="box" library_version="1">
@@ -17635,8 +17664,8 @@ TS-003</description>
 <wire x1="-27.94" y1="-22.86" x2="-27.94" y2="20.32" width="0.254" layer="94"/>
 <text x="-5.08" y="20.828" size="1.778" layer="95">&gt;NAME</text>
 <text x="-25.4" y="-25.4" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="VDD" x="-33.02" y="10.16" length="middle" direction="pwr"/>
-<pin name="VCAP" x="-33.02" y="7.62" length="middle" direction="pwr"/>
+<pin name="VCC" x="-33.02" y="10.16" length="middle" direction="pwr"/>
+<pin name="VCAP" x="-33.02" y="7.62" length="middle" direction="in"/>
 <pin name="GND" x="-33.02" y="-2.54" length="middle" direction="pwr"/>
 <pin name="!RST" x="-33.02" y="17.78" length="middle" direction="in"/>
 <pin name="OSCIN/PA1" x="-33.02" y="-12.7" length="middle"/>
@@ -17785,7 +17814,34 @@ data EEPROM, 10-bit ADC, 3 timers, UART, SPI, I2C</description>
 <connect gate="G$1" pin="PD5/UART1_TX/AIN5" pad="2"/>
 <connect gate="G$1" pin="PD6/UART1_RX/AIN6" pad="3"/>
 <connect gate="G$1" pin="VCAP" pad="8"/>
-<connect gate="G$1" pin="VDD" pad="9"/>
+<connect gate="G$1" pin="VCC" pad="9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="TSSOP-20">
+<connects>
+<connect gate="G$1" pin="!RST" pad="4"/>
+<connect gate="G$1" pin="GND" pad="7"/>
+<connect gate="G$1" pin="OSCIN/PA1" pad="5"/>
+<connect gate="G$1" pin="OSCOUT/PA2" pad="6"/>
+<connect gate="G$1" pin="PA3/TIM2_CH3/[SPI_NSS]" pad="10"/>
+<connect gate="G$1" pin="PB4/I2C_SCL/[ADC_ETR]" pad="12"/>
+<connect gate="G$1" pin="PB5/I2C_SDA/[TIM1_BKIN]" pad="11"/>
+<connect gate="G$1" pin="PC3/TIM1_CH3/[TLI]/[!TIM1_CH1!]" pad="13"/>
+<connect gate="G$1" pin="PC4/TIM1_CH4/CLK_CCO/AIN2/[!TIM1_CH2!]" pad="14"/>
+<connect gate="G$1" pin="PC5/SPI_SCK/[TIM2_CH1]" pad="15"/>
+<connect gate="G$1" pin="PC6/SPI_MOSI/[TIM1_CH1]" pad="16"/>
+<connect gate="G$1" pin="PC7/SPI_MISO/[TIM1_CH2]" pad="17"/>
+<connect gate="G$1" pin="PD1/SWIM" pad="18"/>
+<connect gate="G$1" pin="PD2/AIN3/[TIM2_CH3]" pad="19"/>
+<connect gate="G$1" pin="PD3/AIN4/TIM2_CH2/ADC_ETR" pad="20"/>
+<connect gate="G$1" pin="PD4/UART1_CK/TIM2_CH1/BEEP" pad="1"/>
+<connect gate="G$1" pin="PD5/UART1_TX/AIN5" pad="2"/>
+<connect gate="G$1" pin="PD6/UART1_RX/AIN6" pad="3"/>
+<connect gate="G$1" pin="VCAP" pad="8"/>
+<connect gate="G$1" pin="VCC" pad="9"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -22190,8 +22246,8 @@ nominal inductance, magnetically screened</description>
 <part name="S3" library="switch-omron" library_urn="urn:adsk.eagle:library:377" deviceset="31-XX" device="" package3d_urn="urn:adsk.eagle:package:27487/1"/>
 <part name="SUPPLY1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="SUPPLY2" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="51k"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="51k"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100k"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100k"/>
 <part name="J1" library="con-jack" library_urn="urn:adsk.eagle:library:154" deviceset="DCJ0202" device="" package3d_urn="urn:adsk.eagle:package:7491/1"/>
 <part name="SUPPLY3" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="T1" library="transistor" library_urn="urn:adsk.eagle:library:402" deviceset="*-NPN-" device="SOT23-BEC" package3d_urn="urn:adsk.eagle:package:28748/2" technology="BC817-16" value="PMBTA42"/>
@@ -22265,32 +22321,36 @@ nominal inductance, magnetically screened</description>
 <part name="SUPPLY14" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="C2" library="myRlc" deviceset="CAP" device="" package3d_urn="urn:adsk.eagle:package:23617/2" value="100nf"/>
-<part name="IC4" library="inter" deviceset="STM8S003" device="F3"/>
+<part name="IC4" library="inter" deviceset="STM8S003" device="" value="STM8S003"/>
 <part name="SUPPLY17" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="SV1" library="inter" deviceset="SWIM" device=""/>
 <part name="P+7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="SUPPLY18" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="C4" library="myRlc" deviceset="CAP" device="" package3d_urn="urn:adsk.eagle:package:23617/2" value="100nf"/>
+<part name="C4" library="myRlc" deviceset="CAP" device="" package3d_urn="urn:adsk.eagle:package:23617/2" value="10nf"/>
 <part name="R40" library="myRlc" deviceset="RES" device="" package3d_urn="urn:adsk.eagle:package:23553/2" value="1k"/>
 <part name="P+8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="SUPPLY19" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="U1" library="inter" deviceset="DS1307" device="" package3d_urn="urn:adsk.eagle:package:39057/1"/>
 <part name="SUPPLY20" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="Q1" library="crystal" library_urn="urn:adsk.eagle:library:204" deviceset="CRYSTAL" device="TC26H" package3d_urn="urn:adsk.eagle:package:12086/1"/>
+<part name="Q1" library="crystal" library_urn="urn:adsk.eagle:library:204" deviceset="CRYSTAL" device="TC26H" package3d_urn="urn:adsk.eagle:package:12086/1" value="32.768kHz"/>
 <part name="P+9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
 <part name="C5" library="myRlc" deviceset="CAP" device="" package3d_urn="urn:adsk.eagle:package:23617/2" value="100nf"/>
 <part name="SUPPLY21" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E3.5-8" package3d_urn="urn:adsk.eagle:package:23360/2" value="470uf"/>
 <part name="SUPPLY15" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="DIODE-" device="DO-214AC" package3d_urn="urn:adsk.eagle:package:43416/2" value="GS1M"/>
-<part name="L1" library="inductor-neosid" library_urn="urn:adsk.eagle:library:241" deviceset="BS" device="11" package3d_urn="urn:adsk.eagle:package:14648/1" value="240u"/>
+<part name="L1" library="inductor-neosid" library_urn="urn:adsk.eagle:library:241" deviceset="BS" device="11" package3d_urn="urn:adsk.eagle:package:14648/1" value="270u"/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="VCC" device=""/>
-<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E3.5-8" package3d_urn="urn:adsk.eagle:package:23360/2" value="10uf/400V"/>
+<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-EU" device="E3.5-8" package3d_urn="urn:adsk.eagle:package:23360/2" value="2.2uf/400V"/>
 <part name="SUPPLY16" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="Q2" library="inter" deviceset="SPD06N80C3" device="" package3d_urn="urn:adsk.eagle:package:28537/2"/>
 <part name="R39" library="myRlc" deviceset="RES" device="" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
 <part name="R41" library="myRlc" deviceset="RES" device="" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
+<part name="C7" library="myRlc" deviceset="CAP" device="" package3d_urn="urn:adsk.eagle:package:23617/2" value="12pf"/>
+<part name="C8" library="myRlc" deviceset="CAP" device="" package3d_urn="urn:adsk.eagle:package:23617/2" value="12pf"/>
+<part name="SUPPLY22" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
+<part name="C9" library="myRlc" deviceset="CAP" device="" package3d_urn="urn:adsk.eagle:package:23617/2" value="100nf"/>
 </parts>
 <sheets>
 <sheet>
@@ -22678,8 +22738,8 @@ nominal inductance, magnetically screened</description>
 <attribute name="VALUE" x="231.775" y="32.385" size="1.778" layer="96"/>
 </instance>
 <instance part="Q1" gate="G$1" x="228.6" y="50.8" smashed="yes" rot="MR270">
-<attribute name="NAME" x="227.584" y="48.26" size="1.778" layer="95" rot="MR270"/>
-<attribute name="VALUE" x="231.14" y="48.26" size="1.778" layer="96" rot="MR270"/>
+<attribute name="NAME" x="226.314" y="54.61" size="1.778" layer="95" rot="MR90"/>
+<attribute name="VALUE" x="229.87" y="54.61" size="1.778" layer="96" rot="MR90"/>
 </instance>
 <instance part="P+9" gate="VCC" x="261.62" y="60.96" smashed="yes">
 <attribute name="VALUE" x="259.08" y="58.42" size="1.778" layer="96" rot="R90"/>
@@ -22727,6 +22787,21 @@ nominal inductance, magnetically screened</description>
 <instance part="R41" gate="G$1" x="274.32" y="50.8" smashed="yes" rot="R90">
 <attribute name="NAME" x="272.8214" y="46.99" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="277.622" y="46.99" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C7" gate="G$1" x="218.44" y="53.34" smashed="yes" rot="R90">
+<attribute name="NAME" x="218.059" y="54.864" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="223.139" y="54.864" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="C8" gate="G$1" x="218.44" y="45.72" smashed="yes" rot="R90">
+<attribute name="NAME" x="218.059" y="47.244" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="223.139" y="47.244" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="SUPPLY22" gate="GND" x="213.36" y="40.64" smashed="yes">
+<attribute name="VALUE" x="211.455" y="37.465" size="1.778" layer="96"/>
+</instance>
+<instance part="C9" gate="G$1" x="17.78" y="45.72" smashed="yes" rot="R180">
+<attribute name="NAME" x="16.256" y="45.339" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="16.256" y="50.419" size="1.778" layer="96" rot="R180"/>
 </instance>
 </instances>
 <busses>
@@ -23332,6 +23407,9 @@ nominal inductance, magnetically screened</description>
 <wire x1="27.94" y1="38.1" x2="33.02" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
 <junction x="27.94" y="38.1"/>
+<pinref part="C9" gate="G$1" pin="1"/>
+<wire x1="17.78" y1="43.18" x2="17.78" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="17.78" y1="38.1" x2="27.94" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="SUPPLY18" gate="GND" pin="GND"/>
@@ -23364,6 +23442,16 @@ nominal inductance, magnetically screened</description>
 <pinref part="SUPPLY16" gate="GND" pin="GND"/>
 <pinref part="C6" gate="G$1" pin="-"/>
 <wire x1="132.08" y1="96.52" x2="132.08" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C8" gate="G$1" pin="1"/>
+<wire x1="215.9" y1="45.72" x2="213.36" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="213.36" y1="45.72" x2="213.36" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="53.34" x2="215.9" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="SUPPLY22" gate="GND" pin="GND"/>
+<wire x1="213.36" y1="43.18" x2="213.36" y2="45.72" width="0.1524" layer="91"/>
+<junction x="213.36" y="45.72"/>
 </segment>
 </net>
 <net name="DOWN" class="0">
@@ -23822,13 +23910,16 @@ nominal inductance, magnetically screened</description>
 </segment>
 <segment>
 <pinref part="P+6" gate="VCC" pin="VCC"/>
-<pinref part="IC4" gate="G$1" pin="VDD"/>
+<pinref part="IC4" gate="G$1" pin="VCC"/>
 <wire x1="27.94" y1="73.66" x2="27.94" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="68.58" x2="27.94" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="50.8" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="R40" gate="G$1" pin="2"/>
 <wire x1="30.48" y1="68.58" x2="27.94" y2="68.58" width="0.1524" layer="91"/>
 <junction x="27.94" y="68.58"/>
+<pinref part="C9" gate="G$1" pin="2"/>
+<wire x1="17.78" y1="50.8" x2="27.94" y2="50.8" width="0.1524" layer="91"/>
+<junction x="27.94" y="50.8"/>
 </segment>
 <segment>
 <pinref part="P+7" gate="VCC" pin="VCC"/>
@@ -24104,6 +24195,9 @@ nominal inductance, magnetically screened</description>
 <wire x1="228.6" y1="45.72" x2="236.22" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="2"/>
 <wire x1="228.6" y1="48.26" x2="228.6" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="C8" gate="G$1" pin="2"/>
+<wire x1="223.52" y1="45.72" x2="228.6" y2="45.72" width="0.1524" layer="91"/>
+<junction x="228.6" y="45.72"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -24113,6 +24207,9 @@ nominal inductance, magnetically screened</description>
 <wire x1="233.68" y1="48.26" x2="233.68" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="Q1" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="53.34" x2="233.68" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<wire x1="223.52" y1="53.34" x2="228.6" y2="53.34" width="0.1524" layer="91"/>
+<junction x="228.6" y="53.34"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
