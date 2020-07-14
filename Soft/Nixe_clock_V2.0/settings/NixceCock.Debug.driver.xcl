@@ -1,0 +1,15 @@
+"-p" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\config\ddf\iostm8s003f3.ddf" 
+
+"--mcuname" 
+
+"STM8S003F3" 
+
+"--option_bytes_file" 
+
+"C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\optionBytes.obc" 
+
+
+
+

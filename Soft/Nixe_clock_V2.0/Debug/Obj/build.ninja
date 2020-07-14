@@ -1,0 +1,35 @@
+#Generating source browse information for project NixceCock
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.3\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build Buttons.pbi : index Buttons.xcl
+build Clock.pbi : index Clock.xcl
+build I2C.pbi : index I2C.xcl
+build Lamp.pbi : index Lamp.xcl
+build System.pbi : index System.xcl
+build main.pbi : index main.xcl
+build NixceCock_part0.pbi : link Buttons.pbi Clock.pbi
+build NixceCock_part1.pbi : link I2C.pbi Lamp.pbi
+build NixceCock_part2.pbi : link System.pbi main.pbi
+build NixceCock.pbd : link NixceCock_part0.pbi NixceCock_part1.pbi NixceCock_part2.pbi
+build NixceCock.pbw : browsedata NixceCock.pbd
+
+

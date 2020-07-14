@@ -1,0 +1,402 @@
+###############################################################################
+#
+# IAR ELF Linker V3.11.1.207 for STM8                     14/Jul/2020  23:02:07
+# Copyright 2010-2019 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Exe\NixceCock.out
+#    Map file     =  
+#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\List\NixceCock.map
+#    Command line =  
+#        -f C:\Users\Dazer\AppData\Local\Temp\EW8F0A.tmp
+#        (C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\Buttons.o
+#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\Clock.o
+#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\I2C.o
+#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\Lamp.o
+#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\main.o
+#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\System.o
+#        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
+#        --no_out_extension -o
+#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Exe\NixceCock.out
+#        --map
+#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\List\NixceCock.map
+#        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        8.3\stm8\config\lnkstm8s003f3.icf" --config_def _CSTACK_SIZE=0x100
+#        --config_def _HEAP_SIZE=0x100 --entry __iar_program_start --debug_lib)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__SystemLibrary            = DLib
+__code_model               = small
+__core                     = stm8
+__data_model               = medium
+__dlib_file_descriptor     = 0
+__dlib_full_locale_support = 0
+__rt_version               = 4
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at start of [0x000000-0x0000ff] { rw section .vregs };
+"A1":  place at end of [0x000000-0x0003ff] { block CSTACK };
+"P2":  place in [from 0x000000 to 0x0003ff] {
+          block HEAP, rw section __DLIB_PERTHREAD, rw section .far.bss,
+          rw section .far.data, rw section .far.noinit,
+          rw section .far_func.textrw, rw section .huge.bss,
+          rw section .huge.data, rw section .huge.noinit,
+          rw section .huge_func.textrw, rw section .iar.dynexit,
+          rw section .near.bss, rw section .near.data, rw section .near.noinit,
+          rw section .near_func.textrw };
+"A2":  place at start of [0x008000-0x009fff] { block INTVEC };
+"P3":  place in [from 0x008000 to 0x009fff] {
+          ro section __DLIB_PERTHREAD_init, ro section .far.data_init,
+          ro section .far_func.textrw_init, ro section .huge.data_init,
+          ro section .huge_func.textrw_init, ro section .iar.init_table,
+          ro section .init_array, ro section .near.data_init,
+          ro section .near.rodata, ro section .near_func.text,
+          ro section .near_func.textrw_init, ro section .tiny.data_init,
+          ro section .tiny.rodata_init };
+"P4":  place in [from 0x008000 to 0x009fff] {
+          ro section .far.rodata, ro section .far_func.text };
+"P5":  place in [from 0x008000 to 0x009fff] {
+          ro section .huge.rodata, ro section .huge_func.text };
+do not initialize {
+   rw section .eeprom.noinit, rw section .far.noinit, rw section .huge.noinit,
+   rw section .near.noinit, rw section .tiny.noinit, rw section .vregs };
+initialize by copy {
+   rw section .far.bss, rw section .far.data, rw section .far_func.textrw,
+   rw section .huge.bss, rw section .huge.data, rw section .huge_func.textrw,
+   rw section .iar.dynexit, rw section .near.bss, rw section .near.data,
+   rw section .near_func.textrw, rw section .tiny.bss, rw section .tiny.data,
+   ro section .tiny.rodata };
+
+No sections matched the following patterns:
+
+  ro section .far.data_init          in "P3-P5"
+  ro section .far.rodata             in "P3-P5"
+  ro section .far_func.text          in "P3-P5"
+  ro section .far_func.textrw_init   in "P3-P5"
+  ro section .huge.data_init         in "P3-P5"
+  ro section .huge.rodata            in "P3-P5"
+  ro section .huge_func.text         in "P3-P5"
+  ro section .huge_func.textrw_init  in "P3-P5"
+  ro section .iar.init_table         in "P3-P5"
+  ro section .init_array             in "P3-P5"
+  ro section .near.rodata            in "P3-P5"
+  ro section .near_func.textrw_init  in "P3-P5"
+  ro section .tiny.data_init         in "P3-P5"
+  ro section .tiny.rodata_init       in "P3-P5"
+  ro section __DLIB_PERTHREAD_init   in "P3-P5"
+  rw section .far.bss                in "P2"
+  rw section .far.data               in "P2"
+  rw section .far.noinit             in "P2"
+  rw section .far_func.textrw        in "P2"
+  rw section .huge.bss               in "P2"
+  rw section .huge.data              in "P2"
+  rw section .huge.noinit            in "P2"
+  rw section .huge_func.textrw       in "P2"
+  rw section .iar.dynexit            in "P2"
+  rw section .near.noinit            in "P2"
+  rw section .near_func.textrw       in "P2"
+  rw section .tiny.bss               in "P1"
+  rw section .tiny.data              in "P1"
+  rw section .tiny.noinit            in "P1"
+  rw section .tiny.rodata            in "P1"
+  rw section __DLIB_PERTHREAD        in "P2"
+  section .eeprom.data               in "P6-P8"
+  section .eeprom.noinit             in "P6-P8"
+  section .eeprom.rodata             in "P6-P8"
+
+
+  Section            Kind      Address   Size  Object
+  -------            ----      -------   ----  ------
+"A0":                                     0xc
+  .vregs             uninit   0x000000    0xc  vregs.o [4]
+                            - 0x00000c    0xc
+
+"P2", part 1 of 2:                        0x6
+  P2-1                        0x00000c    0x6  <Init block>
+    .near.data       inited   0x00000c    0x6  Lamp.o [1]
+                            - 0x000012    0x6
+
+"P2", part 2 of 2:                       0x3e
+  .near.bss          zero     0x000012    0x6  Buttons.o [1]
+  .near.bss          zero     0x000018    0x6  Lamp.o [1]
+  .near.bss          zero     0x00001e    0x6  Lamp.o [1]
+  .near.bss          zero     0x000024    0x6  Lamp.o [1]
+  .near.bss          zero     0x00002a    0x4  System.o [1]
+  .near.bss          zero     0x00002e    0x3  Buttons.o [1]
+  .near.bss          zero     0x000031    0x3  Buttons.o [1]
+  .near.bss          zero     0x000034    0x3  Buttons.o [1]
+  .near.bss          zero     0x000037    0x3  Buttons.o [1]
+  .near.bss          zero     0x00003a    0x2  Clock.o [1]
+  .near.bss          zero     0x00003c    0x2  Clock.o [1]
+  .near.bss          zero     0x00003e    0x2  Clock.o [1]
+  .near.bss          zero     0x000040    0x1  Buttons.o [1]
+  .near.bss          zero     0x000041    0x1  Clock.o [1]
+  .near.bss          zero     0x000042    0x1  Clock.o [1]
+  .near.bss          zero     0x000043    0x1  Clock.o [1]
+  .near.bss          zero     0x000044    0x1  Clock.o [1]
+  .near.bss          zero     0x000045    0x1  Clock.o [1]
+  .near.bss          zero     0x000046    0x1  Clock.o [1]
+  .near.bss          zero     0x000047    0x1  Clock.o [1]
+  .near.bss          zero     0x000048    0x1  Clock.o [1]
+  .near.bss          zero     0x000049    0x1  Clock.o [1]
+  .near.bss          zero     0x00004a    0x1  Clock.o [1]
+  .near.bss          zero     0x00004b    0x1  Clock.o [1]
+  .near.bss          zero     0x00004c    0x1  Clock.o [1]
+  .near.bss          zero     0x00004d    0x1  Clock.o [1]
+  .near.bss          zero     0x00004e    0x1  Lamp.o [1]
+  .near.bss          zero     0x00004f    0x1  Lamp.o [1]
+                            - 0x000050   0x3e
+
+"A1":                                   0x100
+  CSTACK                      0x000300  0x100  <Block>
+    CSTACK           uninit   0x000300  0x100  <Block tail>
+                            - 0x000400  0x100
+
+"A2":                                    0x80
+  INTVEC                      0x008000   0x80  <Block>
+    .intvec          const    0x008000   0x80  interrupt.o [4]
+                            - 0x008080   0x80
+
+"P3-P5":                                0x9c8
+  .near_func.text    ro code  0x008080  0x159  Clock.o [1]
+  .near_func.text    ro code  0x0081d9   0xf3  Clock.o [1]
+  .near_func.text    ro code  0x0082cc   0xed  Lamp.o [1]
+  .near_func.text    ro code  0x0083b9   0xb3  Clock.o [1]
+  .near_func.text    ro code  0x00846c   0x95  I2C.o [1]
+  .near_func.text    ro code  0x008501   0x89  long.o [4]
+  .near_func.text    ro code  0x00858a   0x88  Buttons.o [1]
+  .near_func.text    ro code  0x008612   0x70  System.o [1]
+  .near_func.text    ro code  0x008682   0x60  I2C.o [1]
+  .near_func.text    ro code  0x0086e2   0x59  Clock.o [1]
+  .near_func.text    ro code  0x00873b   0x41  Clock.o [1]
+  .near_func.text    ro code  0x00877c   0x41  System.o [1]
+  .near_func.text    ro code  0x0087bd   0x40  Buttons.o [1]
+  .near_func.text    ro code  0x0087fd   0x40  I2C.o [1]
+  .near_func.text    ro code  0x00883d   0x3c  main.o [1]
+  .near_func.text    ro code  0x008879   0x3b  Clock.o [1]
+  .near_func.text    ro code  0x0088b4   0x35  System.o [1]
+  .near_func.text    ro code  0x0088e9   0x28  init_small.o [4]
+  .near_func.text    ro code  0x008911   0x22  Clock.o [1]
+  .near_func.text    ro code  0x008933   0x21  System.o [1]
+  .iar.init_table    const    0x008954   0x12  - Linker created -
+  .near_func.text    ro code  0x008966   0x1e  init_small.o [4]
+  .near_func.text    ro code  0x008984   0x1c  long_util.o [4]
+  .near_func.text    ro code  0x0089a0   0x18  vreg_util.o [4]
+  .near_func.text    ro code  0x0089b8   0x14  init.o [4]
+  .near_func.text    ro code  0x0089cc   0x14  __dbg_xxexit.o [3]
+  .near_func.text    ro code  0x0089e0   0x13  System.o [1]
+  .near_func.text    ro code  0x0089f3   0x13  cstartup.o [4]
+  .near_func.text    ro code  0x008a06   0x11  System.o [1]
+  .near_func.text    ro code  0x008a17   0x10  Lamp.o [1]
+  .near_func.text    ro code  0x008a27    0x8  short.o [4]
+  Initializer bytes  const    0x008a2f    0x6  <for P2-1>
+  .near_func.text    ro code  0x008a35    0x5  cexit.o [4]
+  .near_func.text    ro code  0x008a3a    0x3  interrupt.o [4]
+  .near_func.text    ro code  0x008a3d    0x3  low_level_init.o [4]
+  .near_func.text    ro code  0x008a40    0x3  exit.o [4]
+  .near_func.text    ro code  0x008a43    0x3  unhandled_exception.o [4]
+  .near_func.text    ro code  0x008a46    0x1  Buttons.o [1]
+  .near_func.text    ro code  0x008a47    0x1  __dbg_break.o [3]
+                            - 0x008a48  0x9c8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address   Size
+          -------   ----
+Zero (__iar_zero_init2)
+    1 destination range, total size 0x3e:
+          0x000012  0x3e
+
+Copy (__iar_copy_init2)
+    1 source range, total size 0x6:
+          0x008a2f   0x6
+    1 destination range, total size 0x6:
+          0x00000c   0x6
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj: [1]
+    Buttons.o                  201                19
+    Clock.o                  1 014                19
+    I2C.o                      309
+    Lamp.o                     253        6       26
+    System.o                   299                 4
+    main.o                      60
+    ------------------------------------------------
+    Total:                   2 136        6       68
+
+command line: [2]
+    ------------------------------------------------
+    Total:
+
+dbgstm8smd.a: [3]
+    __dbg_break.o                1
+    __dbg_xxexit.o              20
+    ------------------------------------------------
+    Total:                      21
+
+dlstm8smn.a: [4]
+    cexit.o                      5
+    cstartup.o                  19
+    exit.o                       3
+    init.o                      20
+    init_small.o                70
+    interrupt.o                  3      128
+    long.o                     137
+    long_util.o                 28
+    low_level_init.o             3
+    short.o                      8
+    unhandled_exception.o        3
+    vreg_util.o                 24
+    vregs.o                                       12
+    ------------------------------------------------
+    Total:                     323      128       12
+
+    Linker created                       18      256
+----------------------------------------------------
+    Grand Total:             2 480      152      336
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                    Address   Size  Type      Object
+-----                    -------   ----  ----      ------
+.iar.init_table$$Base   0x008954          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x008966          --   Gb  - Linker created -
+?b0                     0x000000         Data  Gb  vregs.o [4]
+?b1                     0x000001         Data  Gb  vregs.o [4]
+?b10                    0x00000a         Data  Gb  vregs.o [4]
+?b11                    0x00000b         Data  Gb  vregs.o [4]
+?b2                     0x000002         Data  Gb  vregs.o [4]
+?b3                     0x000003         Data  Gb  vregs.o [4]
+?b4                     0x000004         Data  Gb  vregs.o [4]
+?b5                     0x000005         Data  Gb  vregs.o [4]
+?b6                     0x000006         Data  Gb  vregs.o [4]
+?b7                     0x000007         Data  Gb  vregs.o [4]
+?b8                     0x000008         Data  Gb  vregs.o [4]
+?b9                     0x000009         Data  Gb  vregs.o [4]
+?e0                     0x000001         Data  Gb  vregs.o [4]
+?e1                     0x000005         Data  Gb  vregs.o [4]
+?e2                     0x000009         Data  Gb  vregs.o [4]
+?l0                     0x000000         Data  Gb  vregs.o [4]
+?l1                     0x000004         Data  Gb  vregs.o [4]
+?l2                     0x000008         Data  Gb  vregs.o [4]
+?load32_l1_0x           0x008994         Code  Gb  long_util.o [4]
+?load32_l1_asp          0x008989         Code  Gb  long_util.o [4]
+?load32_l1_dbsp         0x008984         Code  Gb  long_util.o [4]
+?load32_l1_xsp          0x00898b         Code  Gb  long_util.o [4]
+?push_w4                0x0089a0         Code  Gb  vreg_util.o [4]
+?sll16_x_x_a            0x008a27         Code  Gb  short.o [4]
+?sll32_0x_0x_a          0x00857c         Code  Gb  long.o [4]
+?sll32_l0_l0_a          0x008579         Code  Gb  long.o [4]
+?ucmp32_c_l0_l1         0x00856e         Code  Gb  long.o [4]
+?udiv32_l0_l0_l1        0x008501         Code  Gb  long.o [4]
+?umod32_l1_l0_l1        0x008501         Code  Gb  long.o [4]
+?w0                     0x000000         Data  Gb  vregs.o [4]
+?w1                     0x000002         Data  Gb  vregs.o [4]
+?w2                     0x000004         Data  Gb  vregs.o [4]
+?w3                     0x000006         Data  Gb  vregs.o [4]
+?w4                     0x000008         Data  Gb  vregs.o [4]
+?w5                     0x00000a         Data  Gb  vregs.o [4]
+ButtonPins              0x00002e    0x3  Data  Gb  Buttons.o [1]
+ButtonTrigger           0x000037    0x3  Data  Gb  Buttons.o [1]
+ButtonsPort             0x000012    0x6  Data  Gb  Buttons.o [1]
+CSTACK$$Base            0x000300          --   Gb  - Linker created -
+CSTACK$$Limit           0x000400          --   Gb  - Linker created -
+DotEnable               0x00004e    0x1  Data  Gb  Lamp.o [1]
+INTVEC$$Base            0x008000          --   Gb  - Linker created -
+INTVEC$$Limit           0x008080          --   Gb  - Linker created -
+LoopLamp                0x0086e2   0x59  Code  Gb  Clock.o [1]
+PointEnable             0x000018    0x6  Data  Gb  Lamp.o [1]
+ReadI2C                 0x008682   0x60  Code  Gb  I2C.o [1]
+Region$$Table$$Base     0x008954          --   Gb  - Linker created -
+Region$$Table$$Limit    0x008966          --   Gb  - Linker created -
+ValueLamp               0x000024    0x6  Data  Gb  Lamp.o [1]
+WriteI2C                0x0087fd   0x40  Code  Gb  I2C.o [1]
+__DebugBreak            0x008a47    0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x0089cc   0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_copy_init2        0x0088e9         Code  Gb  init_small.o [4]
+__iar_data_init2        0x0089b8   0x14  Code  Gb  init.o [4]
+__iar_program_start     0x0089f3         Code  Gb  cstartup.o [4]
+__iar_unhandled_exception
+                        0x008a43         Code  Gb  unhandled_exception.o [4]
+__iar_zero_init2        0x008966         Code  Gb  init_small.o [4]
+__intvec                0x008000         Data  Gb  interrupt.o [4]
+__low_level_init        0x008a3d    0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x008a35         Code  Gb  cexit.o [4]
+bcdToDecimal            0x0089e0   0x13  Code  Gb  System.o [1]
+countDel                0x00004a    0x1  Data  Gb  Clock.o [1]
+countDelDs              0x00004d    0x1  Data  Gb  Clock.o [1]
+countDelInc             0x00003e    0x2  Data  Gb  Clock.o [1]
+countDelPressed         0x00003c    0x2  Data  Gb  Clock.o [1]
+countLamp               0x00004f    0x1  Data  Gb  Lamp.o [1]
+countPosit              0x000042    0x1  Data  Gb  Clock.o [1]
+counterButtons          0x000040    0x1  Data  Gb  Buttons.o [1]
+counterDigis            0x00004b    0x1  Data  Gb  Clock.o [1]
+decimalToBcd            0x008933   0x21  Code  Gb  System.o [1]
+decrementTime           0x008879   0x3b  Code  Gb  Clock.o [1]
+delCountBlink           0x00003a    0x2  Data  Gb  Clock.o [1]
+delCountButtOff         0x000034    0x3  Data  Gb  Buttons.o [1]
+delCountButtOn          0x000031    0x3  Data  Gb  Buttons.o [1]
+delay                   0x008612   0x70  Code  Gb  System.o [1]
+digisEnable             0x00001e    0x6  Data  Gb  Lamp.o [1]
+exit                    0x008a40    0x3  Code  Gb  exit.o [4]
+hour                    0x000045    0x1  Data  Gb  Clock.o [1]
+incrementTime           0x00873b   0x41  Code  Gb  Clock.o [1]
+initButtons             0x0087bd   0x40  Code  Gb  Buttons.o [1]
+initClock               0x008a06   0x11  Code  Gb  System.o [1]
+initDs1307              0x008911   0x22  Code  Gb  Clock.o [1]
+initGPIO                0x0088b4   0x35  Code  Gb  System.o [1]
+initI2C                 0x00846c   0x95  Code  Gb  I2C.o [1]
+initLamp                0x008a17   0x10  Code  Gb  Lamp.o [1]
+initTimers              0x00877c   0x41  Code  Gb  System.o [1]
+isLoopLamp              0x000047    0x1  Data  Gb  Clock.o [1]
+isMenu                  0x000041    0x1  Data  Gb  Clock.o [1]
+lampAnodePosit          0x00000c    0x6  Data  Gb  Lamp.o [1]
+main                    0x00883d   0x3c  Code  Gb  main.o [1]
+minute                  0x000044    0x1  Data  Gb  Clock.o [1]
+numberLoop              0x00004c    0x1  Data  Gb  Clock.o [1]
+oldHour                 0x000049    0x1  Data  Gb  Clock.o [1]
+oldMinute               0x000048    0x1  Data  Gb  Clock.o [1]
+onClickButton           0x0083b9   0xb3  Code  Gb  Clock.o [1]
+processButtons          0x00858a   0x88  Code  Gb  Buttons.o [1]
+processClock            0x0081d9   0xf3  Code  Gb  Clock.o [1]
+processDisplay          0x0082cc   0xed  Code  Gb  Lamp.o [1]
+processMenu             0x008080  0x159  Code  Gb  Clock.o [1]
+seconds                 0x000043    0x1  Data  Gb  Clock.o [1]
+tickDelay               0x00002a    0x4  Data  Gb  System.o [1]
+triggerBLink            0x000046    0x1  Data  Gb  Clock.o [1]
+unPressedButton         0x008a46    0x1  Code  Wk  Buttons.o [1]
+
+
+[1] = C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj
+[2] = command line
+[3] = dbgstm8smd.a
+[4] = dlstm8smn.a
+
+  2 480 bytes of readonly  code memory
+    152 bytes of readonly  data memory
+    336 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
