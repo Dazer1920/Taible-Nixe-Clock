@@ -178,7 +178,7 @@ void processClock() {
       DotEnable = (DotEnable == ON)? OFF : ON;
     }
     
-    if(++countDelDs >= 100) {
+    if(++countDelDs >= 200) {
       countDelDs = 0;
       
       ReadI2C(0xd0, 0, &seconds);

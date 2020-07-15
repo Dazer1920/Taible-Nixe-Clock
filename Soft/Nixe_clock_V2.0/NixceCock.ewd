@@ -199,7 +199,7 @@
                 </option>
                 <option>
                     <name>STlinkOptionBytesSetupFile</name>
-                    <state>C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\optionBytes.obc</state>
+                    <state>C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\optionBytes.obc</state>
                 </option>
                 <option>
                     <name>STlinkEraseMemory</name>
