@@ -1,26 +1,26 @@
-"C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\rsc\Buttons.c"
+"C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\rsc\Buttons.c"
 -std=c99
 -ferror-limit=0
 -fbracket-depth=512
 -MD
 -MF
-C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\Buttons.pbi.dep
+C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\Buttons.pbi.dep
 -o
 Buttons.pbi
 -I
-C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\rsc
+C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\rsc
 -I
-C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\inc
+C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc
 -I
-C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\rsc
+C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\rsc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\stm8\inc\c
 -I
-C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\inc
+C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc
 -I
-C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\rsc
+C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\rsc
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

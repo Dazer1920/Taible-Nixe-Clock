@@ -1,25 +1,25 @@
 ###############################################################################
 #
-# IAR ELF Linker V3.11.1.207 for STM8                     14/Jul/2020  23:02:07
+# IAR ELF Linker V3.11.1.207 for STM8                     15/Jul/2020  09:42:33
 # Copyright 2010-2019 IAR Systems AB.
 #
 #    Output file  =  
-#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Exe\NixceCock.out
+#        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Exe\NixceCock.out
 #    Map file     =  
-#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\List\NixceCock.map
+#        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\List\NixceCock.map
 #    Command line =  
-#        -f C:\Users\Dazer\AppData\Local\Temp\EW8F0A.tmp
-#        (C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\Buttons.o
-#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\Clock.o
-#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\I2C.o
-#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\Lamp.o
-#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\main.o
-#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj\System.o
+#        -f C:\Users\Dazer\AppData\Local\Temp\EWE4F3.tmp
+#        (C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\Buttons.o
+#        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\Clock.o
+#        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\I2C.o
+#        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\Lamp.o
+#        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\main.o
+#        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\System.o
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
 #        --no_out_extension -o
-#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Exe\NixceCock.out
+#        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Exe\NixceCock.out
 #        --map
-#        C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\List\NixceCock.map
+#        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\List\NixceCock.map
 #        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        8.3\stm8\config\lnkstm8s003f3.icf" --config_def _CSTACK_SIZE=0x100
 #        --config_def _HEAP_SIZE=0x100 --entry __iar_program_start --debug_lib)
@@ -233,7 +233,7 @@ Copy (__iar_copy_init2)
 
     Module                 ro code  ro data  rw data
     ------                 -------  -------  -------
-C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj: [1]
+C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj: [1]
     Buttons.o                  201                19
     Clock.o                  1 014                19
     I2C.o                      309
@@ -389,7 +389,7 @@ triggerBLink            0x000046    0x1  Data  Gb  Clock.o [1]
 unPressedButton         0x008a46    0x1  Code  Wk  Buttons.o [1]
 
 
-[1] = C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\Debug\Obj
+[1] = C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj
 [2] = command line
 [3] = dbgstm8smd.a
 [4] = dlstm8smn.a

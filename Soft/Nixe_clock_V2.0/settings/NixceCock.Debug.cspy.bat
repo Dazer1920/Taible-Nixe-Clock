@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\settings\NixceCock.Debug.general.xcl" --backend -f "C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\settings\NixceCock.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\settings\NixceCock.Debug.general.xcl" --backend -f "C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\settings\NixceCock.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\settings\NixceCock.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Dazer\Desktop\Taibe_NIXE_clock\Soft\Nixe_clock_V2.0\settings\NixceCock.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\settings\NixceCock.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\settings\NixceCock.Debug.driver.xcl" 
 
 @echo off 
 :end
