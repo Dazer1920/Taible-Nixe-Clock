@@ -5,46 +5,65 @@
     <configuration>
         <name>Debug</name>
         <outputs>
-            <file>$PROJ_DIR$\inc\Buttons.h</file>
-            <file>$PROJ_DIR$\inc\Clock.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
-            <file>$PROJ_DIR$\Debug\Obj\I2C.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\System.xcl</file>
-            <file>$PROJ_DIR$\Debug\Exe\NixceCock.hex</file>
-            <file>$PROJ_DIR$\Debug\Obj\NixceCock.pbd</file>
-            <file>$PROJ_DIR$\Debug\Obj\Clock.o</file>
-            <file>$PROJ_DIR$\Debug\List\NixceCock.map</file>
-            <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
-            <file>$PROJ_DIR$\inc\Lamp.h</file>
-            <file>$PROJ_DIR$\rsc\Lamp.c</file>
-            <file>$PROJ_DIR$\rsc\Clock.c</file>
-            <file>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</file>
-            <file>$PROJ_DIR$\Debug\Exe\NixceCock.out</file>
-            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\Lamp.o</file>
-            <file>$PROJ_DIR$\Debug\Obj\Buttons.o</file>
-            <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
-            <file>$PROJ_DIR$\Debug\Obj\System.o</file>
             <file>$PROJ_DIR$\inc\stm8s.h</file>
+            <file>$PROJ_DIR$\inc\Buttons.h</file>
             <file>$PROJ_DIR$\inc\System.h</file>
-            <file>$PROJ_DIR$\inc\I2C.h</file>
             <file>$PROJ_DIR$\rsc\Buttons.c</file>
-            <file>$PROJ_DIR$\main.c</file>
-            <file>$PROJ_DIR$\rsc\System.c</file>
+            <file>$PROJ_DIR$\inc\Lamp.h</file>
+            <file>$PROJ_DIR$\inc\I2C.h</file>
+            <file>$PROJ_DIR$\inc\Clock.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2C.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+            <file>$TOOLKIT_DIR$\config\lnkstm8s003f3.icf</file>
+            <file>$PROJ_DIR$\Debug\Obj\System.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\main.xcl</file>
             <file>$PROJ_DIR$\Debug\Obj\Buttons.xcl</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lamp.o</file>
+            <file>$PROJ_DIR$\rsc\Lamp.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Clock.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\System.o</file>
+            <file>$PROJ_DIR$\Debug\Obj\Clock.xcl</file>
+            <file>$PROJ_DIR$\main.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\NixceCock.pbd</file>
+            <file>$PROJ_DIR$\Debug\Obj\Buttons.o</file>
+            <file>$PROJ_DIR$\rsc\System.c</file>
+            <file>$TOOLKIT_DIR$\lib\dbgstm8smd.a</file>
+            <file>$PROJ_DIR$\Debug\Obj\I2C.xcl</file>
+            <file>$TOOLKIT_DIR$\lib\dlstm8smn.a</file>
+            <file>$PROJ_DIR$\Debug\Exe\NixceCock.out</file>
+            <file>$PROJ_DIR$\Debug\Exe\NixceCock.hex</file>
+            <file>$PROJ_DIR$\rsc\Clock.c</file>
+            <file>$PROJ_DIR$\Debug\Obj\Lamp.xcl</file>
+            <file>$PROJ_DIR$\rsc\I2C.c</file>
+            <file>$PROJ_DIR$\Debug\List\NixceCock.map</file>
             <file>$PROJ_DIR$\Debug\Obj\main.o</file>
             <file>$PROJ_DIR$\Debug\Obj\main.__cstat.et</file>
-            <file>$PROJ_DIR$\Debug\Obj\Clock.xcl</file>
-            <file>$PROJ_DIR$\rsc\I2C.c</file>
-            <file>$PROJ_DIR$\Debug\Obj\I2C.xcl</file>
-            <file>$PROJ_DIR$\Debug\Obj\Lamp.xcl</file>
         </outputs>
+        <file>
+            <name>$PROJ_DIR$\rsc\Buttons.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 20</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 12</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 1 2 0 8</file>
+                </tool>
+            </inputs>
+        </file>
         <file>
             <name>[ROOT_NODE]</name>
             <outputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 14 8</file>
+                    <file> 25 30</file>
                 </tool>
             </outputs>
         </file>
@@ -53,74 +72,17 @@
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 16</file>
+                    <file> 13</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 32</file>
+                    <file> 28</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 10 21 20 2</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\rsc\Clock.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 7</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 29</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 1 21 20 2 0 10 22</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\Debug\Exe\NixceCock.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 8</file>
-                </tool>
-                <tool>
-                    <name>OBJCOPY</name>
-                    <file> 5</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 13 17 7 3 16 27 19 9 18</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\rsc\Buttons.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 17</file>
-                </tool>
-                <tool>
-                    <name>BICOMP</name>
-                    <file> 26</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCSTM8</name>
-                    <file> 0 21 20 2</file>
+                    <file> 4 2 0 8</file>
                 </tool>
             </inputs>
         </file>
@@ -129,21 +91,21 @@
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 27</file>
+                    <file> 31</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 15</file>
+                    <file> 11</file>
                 </tool>
                 <tool>
                     <name>__cstat</name>
-                    <file> 28</file>
+                    <file> 32</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 21 20 2 10 0 1 22</file>
+                    <file> 2 0 8 4 1 6 5</file>
                 </tool>
             </inputs>
         </file>
@@ -152,17 +114,55 @@
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 19</file>
+                    <file> 16</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 4</file>
+                    <file> 10</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 21 20 2</file>
+                    <file> 2 0 8</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\Debug\Exe\NixceCock.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 30</file>
+                </tool>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 26</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 9 20 15 7 13 31 16 24 22</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\rsc\Clock.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 15</file>
+                </tool>
+                <tool>
+                    <name>BICOMP</name>
+                    <file> 17</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCSTM8</name>
+                    <file> 6 2 0 8 1 4 5</file>
                 </tool>
             </inputs>
         </file>
@@ -171,17 +171,17 @@
             <outputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 3</file>
+                    <file> 7</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
-                    <file> 31</file>
+                    <file> 23</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCSTM8</name>
-                    <file> 22 21 20 2</file>
+                    <file> 5 2 0 8</file>
                 </tool>
             </inputs>
         </file>
