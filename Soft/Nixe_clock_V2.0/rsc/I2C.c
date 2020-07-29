@@ -19,32 +19,45 @@ void initI2C(uint32_t f_master_hz, uint32_t f_i2c_hz){
   I2C->CR2 |= I2C_CR2_ACK;
 }
 
+uint16_t tickDelTime = 0;
+
+#define timeOut(ms, flag) \
+  tickDelTime = 0; \
+  while(1) { \
+    if(TIM4->SR1 & TIM4_SR1_UIF) { \
+      TIM4->SR1 &= ~TIM4_SR1_UIF; \
+      tickDelTime++; \
+    } \
+    if(tickDelTime == ms) break; \
+    if(!flag) break; \
+  }
+
 void i2c_start() {
   I2C->CR2 |= I2C_CR2_START;
-  while (!(I2C->SR1 & I2C_SR1_SB));
+  timeOut(2, !(I2C->SR1 & I2C_SR1_SB));
 }
 
 void i2c_stop() {
   I2C->CR2 |= I2C_CR2_STOP;
-  while(I2C->SR3 & I2C_SR3_MSL);
+  timeOut(2, I2C->SR3 & I2C_SR3_MSL);
 }
 
 void i2c_write(uint8_t data) {
   I2C->DR = data;
-  while (!(I2C->SR1 & I2C_SR1_TXE));
+  timeOut(2, !(I2C->SR1 & I2C_SR1_TXE));
 }
 
 uint8_t i2c_read(uint8_t ack) {
   if (ack) I2C->CR2 |= I2C_CR2_ACK;
   else I2C->CR2 &= ~I2C_CR2_ACK;
     
-  while (!(I2C->SR1 & I2C_SR1_RXNE));
+  timeOut(2, !(I2C->SR1 & I2C_SR1_RXNE));
   return I2C->DR;
 }
 
 void i2c_write_addr(uint8_t addr) {
   I2C->DR = addr;
-  while (!(I2C->SR1 & I2C_SR1_ADDR));
+  timeOut(2, !(I2C->SR1 & I2C_SR1_ADDR));
   (void) I2C->SR3;
   I2C->CR2 |= I2C_CR2_ACK;
 }

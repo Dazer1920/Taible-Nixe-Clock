@@ -22282,13 +22282,41 @@
     "scope": null
   },
   {
+    "ID": "c:@tickDelTime",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "tickDelTime",
+    "location": {
+      "column": "10",
+      "line": "22",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\I2C.c"
+    },
+    "name": "tickDelTime",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:I2C.c@542@macro@timeOut",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "timeOut",
+    "location": {
+      "column": "9",
+      "line": "24",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\I2C.c"
+    },
+    "name": "timeOut",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@i2c_start",
     "What": "Function",
     "defdec": "Def",
     "display": "void i2c_start(void)",
     "location": {
       "column": "6",
-      "line": "22",
+      "line": "35",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\I2C.c"
     },
     "name": "i2c_start",
@@ -22302,7 +22330,7 @@
     "display": "void i2c_stop(void)",
     "location": {
       "column": "6",
-      "line": "27",
+      "line": "40",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\I2C.c"
     },
     "name": "i2c_stop",
@@ -22316,7 +22344,7 @@
     "display": "void i2c_write(uint8_t)",
     "location": {
       "column": "6",
-      "line": "32",
+      "line": "45",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\I2C.c"
     },
     "name": "i2c_write",
@@ -22330,7 +22358,7 @@
     "display": "uint8_t i2c_read(uint8_t)",
     "location": {
       "column": "9",
-      "line": "37",
+      "line": "50",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\I2C.c"
     },
     "name": "i2c_read",
@@ -22344,7 +22372,7 @@
     "display": "void i2c_write_addr(uint8_t)",
     "location": {
       "column": "6",
-      "line": "45",
+      "line": "58",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\I2C.c"
     },
     "name": "i2c_write_addr",
@@ -22358,7 +22386,7 @@
     "display": "void WriteI2C(uint8_t, uint8_t, uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "52",
+      "line": "65",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\I2C.c"
     },
     "name": "WriteI2C",
@@ -22372,7 +22400,7 @@
     "display": "void ReadI2C(uint8_t, uint8_t, uint8_t *)",
     "location": {
       "column": "6",
-      "line": "62",
+      "line": "75",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\I2C.c"
     },
     "name": "ReadI2C",
