@@ -72,7 +72,7 @@ void WriteI2C(uint8_t address, uint8_t reg_addr, uint8_t *data, uint8_t length){
   i2c_stop();
 }
 
-void ReadI2C(uint8_t address, uint8_t reg_addr, uint8_t *data){
+void ReadI2C(uint8_t address, uint8_t reg_addr, uint8_t *data, uint8_t length){
   i2c_start();
   i2c_write_addr(address);
   i2c_write(reg_addr);
@@ -80,6 +80,10 @@ void ReadI2C(uint8_t address, uint8_t reg_addr, uint8_t *data){
   
   i2c_start();
   i2c_write_addr(address + 1);
-  *data = i2c_read(0);
+  while(length-- > 1) {
+    *data++ = i2c_read(1);
+  }
+  
+  *data++ = i2c_read(0);
   i2c_stop();
 }

@@ -13,10 +13,12 @@ int main() {
   initDs1307();
   
   while(1) {
-    processDisplay();
-    processButtons();
-    processClock();
-    
-    delay(1);
+    if(TIM4->SR1 & TIM4_SR1_UIF) {
+      TIM4->SR1 &= ~TIM4_SR1_UIF;
+      
+      processDisplay();
+      processButtons();
+      processClock();
+    }
   }
 }

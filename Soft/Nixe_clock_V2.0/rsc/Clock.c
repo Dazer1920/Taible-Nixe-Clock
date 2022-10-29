@@ -14,11 +14,21 @@ uint8_t countPosit = 0;
 uint8_t seconds = 0, minute = 0, hour = 0;
 
 void initDs1307() {
-  ReadI2C(0xd0, 0, &seconds);
-  if(seconds & (1 << 7)) {
-    seconds &= ~(1 << 7);
-    WriteI2C(0xd0, 0, &seconds, 1);
+  uint8_t vals[3];
+  Enable init = OFF;
+  ReadI2C(0xd0, 0, vals, 3);
+  
+  if(vals[0] & (1 << 7)) {
+    vals[0] &= ~(1 << 7);
+    init = ON;
   }
+  
+  if(vals[2] & (1 << 6)) {
+    vals[2] &= ~(1 << 6);
+    init = ON;
+  }
+  
+  if(init) WriteI2C(0xd0, 0, vals, 3);
 }
 
 uint16_t delCountBlink = 0, countDelPressed, countDelInc;
@@ -69,14 +79,12 @@ void onClickButton(uint8_t key) {
       digisEnable[4] = ON;
       digisEnable[5] = ON;
       
-      uint8_t val = decimalToBcd(seconds);
-      WriteI2C(0xd0, 0, &val, 1);
+      uint8_t vals[3];
+      vals[0] = decimalToBcd(seconds);      
+      vals[1] = decimalToBcd(minute);      
+      vals[2] = decimalToBcd(hour);
       
-      val = decimalToBcd(minute);
-      WriteI2C(0xd0, 1, &val, 1);
-      
-      val = decimalToBcd(hour);
-      WriteI2C(0xd0, 2, &val, 1);
+      WriteI2C(0xd0, 0, vals, 3);
     }
   }
   
@@ -99,7 +107,7 @@ void LoopLamp() {
   if(oldMinute != minute || oldHour != hour) {
     isLoopLamp = ON;
     if(numberLoop < 3) {
-      if(++countDel >= 10) {
+      if(++countDel >= 30) {
         countDel = 0;
         if(++counterDigis >= 10) {
           counterDigis = 0;
@@ -121,7 +129,7 @@ void LoopLamp() {
 void processMenu() {
   DotEnable = OFF;
   
-  if(ButtonTrigger[DOWN_BUTTON] == OFF && ButtonTrigger[UP_BUTTON] == OFF && ++delCountBlink >= 100) {
+  if(ButtonTrigger[DOWN_BUTTON] == OFF && ButtonTrigger[UP_BUTTON] == OFF && ++delCountBlink >= 200) {
     delCountBlink = 0;
     triggerBLink = (triggerBLink == ON)? OFF : ON;
   }
@@ -173,21 +181,20 @@ void processClock() {
   if(isMenu == ON) {
     processMenu();
   } else {
-    if(++delCountBlink >= 250) {
+    if(++delCountBlink >= 500) {
       delCountBlink = 0;
       DotEnable = (DotEnable == ON)? OFF : ON;
     }
     
-    if(++countDelDs >= 100) {
+    if(++countDelDs >= 200) {
       countDelDs = 0;
       
-      ReadI2C(0xd0, 0, &seconds);
-      ReadI2C(0xd0, 1, &minute);
-      ReadI2C(0xd0, 2, &hour);
+      uint8_t vals[3];
+      ReadI2C(0xd0, 0, vals, 3);
       
-      seconds = bcdToDecimal(seconds);
-      minute = bcdToDecimal(minute);
-      hour = bcdToDecimal(hour);
+      seconds = bcdToDecimal(vals[0]);
+      minute = bcdToDecimal(vals[1]);
+      hour = bcdToDecimal(vals[2]);
     }
 
     LoopLamp();

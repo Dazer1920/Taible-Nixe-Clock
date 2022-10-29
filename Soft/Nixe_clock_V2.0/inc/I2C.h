@@ -11,6 +11,6 @@ typedef enum {
   
 void initI2C(uint32_t f_master_hz, uint32_t f_i2c_hz);                       
 void WriteI2C(uint8_t address, uint8_t reg_addr, uint8_t * data, uint8_t length);
-void ReadI2C(uint8_t address, uint8_t reg_addr, uint8_t * data);
+void ReadI2C(uint8_t address, uint8_t reg_addr, uint8_t * data, uint8_t length);
 
 #endif
