@@ -1,9 +1,9 @@
 Clock.pbi: \
-  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc\I2C.h \
-  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc\Lamp.h \
-  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc\Buttons.h \
-  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
-  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc\stm8s.h \
-  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc\System.h \
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\rsc\Clock.c \
   C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc\Clock.h \
-  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\rsc\Clock.c
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc/System.h \
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc/stm8s.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h \
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc/Buttons.h \
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc/Lamp.h \
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\inc/I2C.h

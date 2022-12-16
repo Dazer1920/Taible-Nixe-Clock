@@ -21740,7 +21740,7 @@
     "display": "delCountBlink",
     "location": {
       "column": "10",
-      "line": "34",
+      "line": "40",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "delCountBlink",
@@ -21754,7 +21754,7 @@
     "display": "countDelPressed",
     "location": {
       "column": "29",
-      "line": "34",
+      "line": "40",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "countDelPressed",
@@ -21768,7 +21768,7 @@
     "display": "countDelInc",
     "location": {
       "column": "46",
-      "line": "34",
+      "line": "40",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "countDelInc",
@@ -21782,7 +21782,7 @@
     "display": "triggerBLink",
     "location": {
       "column": "8",
-      "line": "35",
+      "line": "41",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "triggerBLink",
@@ -21796,7 +21796,7 @@
     "display": "void incrementTime(void)",
     "location": {
       "column": "6",
-      "line": "37",
+      "line": "43",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "incrementTime",
@@ -21810,7 +21810,7 @@
     "display": "void decrementTime(void)",
     "location": {
       "column": "6",
-      "line": "52",
+      "line": "58",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "decrementTime",
@@ -21824,7 +21824,7 @@
     "display": "void onClickButton(uint8_t)",
     "location": {
       "column": "6",
-      "line": "67",
+      "line": "73",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "onClickButton",
@@ -21832,13 +21832,13 @@
     "scope": null
   },
   {
-    "ID": "c:Clock.c@1653@F@onClickButton@vals",
+    "ID": "c:Clock.c@1839@F@onClickButton@vals",
     "What": "Variable",
     "defdec": "Def",
     "display": "vals",
     "location": {
       "column": "15",
-      "line": "82",
+      "line": "88",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "vals",
@@ -21852,7 +21852,7 @@
     "display": "isLoopLamp",
     "location": {
       "column": "8",
-      "line": "104",
+      "line": "110",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "isLoopLamp",
@@ -21866,7 +21866,7 @@
     "display": "oldMinute",
     "location": {
       "column": "9",
-      "line": "105",
+      "line": "111",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "oldMinute",
@@ -21880,7 +21880,7 @@
     "display": "oldHour",
     "location": {
       "column": "20",
-      "line": "105",
+      "line": "111",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "oldHour",
@@ -21894,7 +21894,7 @@
     "display": "countDel",
     "location": {
       "column": "29",
-      "line": "105",
+      "line": "111",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "countDel",
@@ -21908,7 +21908,7 @@
     "display": "counterDigis",
     "location": {
       "column": "39",
-      "line": "105",
+      "line": "111",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "counterDigis",
@@ -21922,7 +21922,7 @@
     "display": "numberLoop",
     "location": {
       "column": "53",
-      "line": "105",
+      "line": "111",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "numberLoop",
@@ -21936,7 +21936,7 @@
     "display": "void LoopLamp(void)",
     "location": {
       "column": "6",
-      "line": "106",
+      "line": "112",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "LoopLamp",
@@ -21950,10 +21950,38 @@
     "display": "void processMenu(void)",
     "location": {
       "column": "6",
-      "line": "129",
+      "line": "135",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "processMenu",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@isReadClock",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "isReadClock",
+    "location": {
+      "column": "8",
+      "line": "184",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
+    },
+    "name": "isReadClock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@EXTI1",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void EXTI1(void)",
+    "location": {
+      "column": "18",
+      "line": "186",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
+    },
+    "name": "EXTI1",
     "origin": "project_file",
     "scope": null
   },
@@ -21964,10 +21992,38 @@
     "display": "countDelDs",
     "location": {
       "column": "9",
-      "line": "178",
+      "line": "197",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "countDelDs",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@oldSeconds",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "oldSeconds",
+    "location": {
+      "column": "9",
+      "line": "198",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
+    },
+    "name": "oldSeconds",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@vals",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "vals",
+    "location": {
+      "column": "9",
+      "line": "199",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
+    },
+    "name": "vals",
     "origin": "project_file",
     "scope": null
   },
@@ -21978,7 +22034,7 @@
     "display": "void processClock(void)",
     "location": {
       "column": "6",
-      "line": "180",
+      "line": "200",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
     },
     "name": "processClock",
@@ -21986,17 +22042,73 @@
     "scope": null
   },
   {
-    "ID": "c:Clock.c@4405@F@processClock@vals",
-    "What": "Variable",
+    "ID": "c:Lamp.h@25@macro@_LAMP_H",
+    "What": "MacroDef",
     "defdec": "Def",
-    "display": "vals",
+    "display": "_LAMP_H",
     "location": {
-      "column": "15",
-      "line": "192",
-      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\Clock.c"
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
     },
-    "name": "vals",
-    "origin": "project_file",
+    "name": "_LAMP_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@initLamp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void initLamp(void)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
+    },
+    "name": "initLamp",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@initLamp",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void initLamp(void)",
+    "location": {
+      "column": "6",
+      "line": "6",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
+    },
+    "name": "initLamp",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@processDisplay",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void processDisplay(void)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
+    },
+    "name": "processDisplay",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@processDisplay",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void processDisplay(void)",
+    "location": {
+      "column": "6",
+      "line": "7",
+      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
+    },
+    "name": "processDisplay",
+    "origin": "user_include",
     "scope": null
   },
   {
@@ -22222,76 +22334,6 @@
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Clock.h"
     },
     "name": "processClock",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:Lamp.h@25@macro@_LAMP_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_LAMP_H",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
-    },
-    "name": "_LAMP_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@initLamp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void initLamp(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
-    },
-    "name": "initLamp",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@initLamp",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void initLamp(void)",
-    "location": {
-      "column": "6",
-      "line": "6",
-      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
-    },
-    "name": "initLamp",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@processDisplay",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void processDisplay(void)",
-    "location": {
-      "column": "6",
-      "line": "7",
-      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
-    },
-    "name": "processDisplay",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@processDisplay",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void processDisplay(void)",
-    "location": {
-      "column": "6",
-      "line": "7",
-      "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\inc\\Lamp.h"
-    },
-    "name": "processDisplay",
     "origin": "user_include",
     "scope": null
   },
@@ -22666,7 +22708,7 @@
     "display": "void initTimers(void)",
     "location": {
       "column": "6",
-      "line": "21",
+      "line": "27",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\System.c"
     },
     "name": "initTimers",
@@ -22680,7 +22722,7 @@
     "display": "uint8_t bcdToDecimal(uint8_t)",
     "location": {
       "column": "9",
-      "line": "40",
+      "line": "46",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\System.c"
     },
     "name": "bcdToDecimal",
@@ -22694,7 +22736,7 @@
     "display": "uint8_t decimalToBcd(uint8_t)",
     "location": {
       "column": "9",
-      "line": "44",
+      "line": "50",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\System.c"
     },
     "name": "decimalToBcd",
@@ -22708,7 +22750,7 @@
     "display": "tickDelay",
     "location": {
       "column": "10",
-      "line": "48",
+      "line": "54",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\System.c"
     },
     "name": "tickDelay",
@@ -22722,7 +22764,7 @@
     "display": "void delay(volatile uint32_t)",
     "location": {
       "column": "6",
-      "line": "49",
+      "line": "55",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\Nixe_clock_V2.0\\rsc\\System.c"
     },
     "name": "delay",

@@ -16,6 +16,12 @@ void initGPIO() {
   GPIOD->DDR |= (7 << 4);
   GPIOD->CR1 |= (7 << 4);
   GPIOD->CR2 |= (7 << 4);
+  
+  GPIOA->DDR &= ~(1 << 1);
+  GPIOA->CR1 |= (1 << 1);
+  GPIOA->CR2 |= (1 << 1);
+  
+  EXTI->CR1 |= EXTI_CR1_PAIS;
 }
 
 void initTimers() {

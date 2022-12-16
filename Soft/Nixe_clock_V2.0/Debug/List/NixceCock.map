@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V3.11.1.207 for STM8                     30/Oct/2022  02:20:40
+# IAR ELF Linker V3.11.1.207 for STM8                     18/Nov/2022  00:50:29
 # Copyright 2010-2019 IAR Systems AB.
 #
 #    Output file  =  
@@ -8,7 +8,7 @@
 #    Map file     =  
 #        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\List\NixceCock.map
 #    Command line =  
-#        -f C:\Users\Dazer\AppData\Local\Temp\EW7CB2.tmp
+#        -f C:\Users\Dazer\AppData\Local\Temp\EWEF77.tmp
 #        (C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\Buttons.o
 #        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\Clock.o
 #        C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj\I2C.o
@@ -125,7 +125,7 @@ No sections matched the following patterns:
     .near.data       inited   0x00000c    0x6  Lamp.o [1]
                             - 0x000012    0x6
 
-"P2", part 2 of 2:                       0x3c
+"P2", part 2 of 2:                       0x3f
   .near.bss          zero     0x000012    0x6  Buttons.o [1]
   .near.bss          zero     0x000018    0x6  Lamp.o [1]
   .near.bss          zero     0x00001e    0x6  Lamp.o [1]
@@ -134,14 +134,12 @@ No sections matched the following patterns:
   .near.bss          zero     0x00002d    0x3  Buttons.o [1]
   .near.bss          zero     0x000030    0x3  Buttons.o [1]
   .near.bss          zero     0x000033    0x3  Buttons.o [1]
-  .near.bss          zero     0x000036    0x2  Clock.o [1]
-  .near.bss          zero     0x000038    0x2  Clock.o [1]
-  .near.bss          zero     0x00003a    0x2  Clock.o [1]
-  .near.bss          zero     0x00003c    0x2  I2C.o [1]
-  .near.bss          zero     0x00003e    0x1  Buttons.o [1]
-  .near.bss          zero     0x00003f    0x1  Clock.o [1]
-  .near.bss          zero     0x000040    0x1  Clock.o [1]
-  .near.bss          zero     0x000041    0x1  Clock.o [1]
+  .near.bss          zero     0x000036    0x3  Clock.o [1]
+  .near.bss          zero     0x000039    0x2  Clock.o [1]
+  .near.bss          zero     0x00003b    0x2  Clock.o [1]
+  .near.bss          zero     0x00003d    0x2  Clock.o [1]
+  .near.bss          zero     0x00003f    0x2  I2C.o [1]
+  .near.bss          zero     0x000041    0x1  Buttons.o [1]
   .near.bss          zero     0x000042    0x1  Clock.o [1]
   .near.bss          zero     0x000043    0x1  Clock.o [1]
   .near.bss          zero     0x000044    0x1  Clock.o [1]
@@ -152,9 +150,12 @@ No sections matched the following patterns:
   .near.bss          zero     0x000049    0x1  Clock.o [1]
   .near.bss          zero     0x00004a    0x1  Clock.o [1]
   .near.bss          zero     0x00004b    0x1  Clock.o [1]
-  .near.bss          zero     0x00004c    0x1  Lamp.o [1]
-  .near.bss          zero     0x00004d    0x1  Lamp.o [1]
-                            - 0x00004e   0x3c
+  .near.bss          zero     0x00004c    0x1  Clock.o [1]
+  .near.bss          zero     0x00004d    0x1  Clock.o [1]
+  .near.bss          zero     0x00004e    0x1  Clock.o [1]
+  .near.bss          zero     0x00004f    0x1  Lamp.o [1]
+  .near.bss          zero     0x000050    0x1  Lamp.o [1]
+                            - 0x000051   0x3f
 
 "A1":                                   0x100
   CSTACK                      0x000300  0x100  <Block>
@@ -166,45 +167,46 @@ No sections matched the following patterns:
     .intvec          const    0x008000   0x80  interrupt.o [4]
                             - 0x008080   0x80
 
-"P3-P5":                                0xacd
+"P3-P5":                                0xae4
   .near_func.text    ro code  0x008080  0x17d  I2C.o [1]
   .near_func.text    ro code  0x0081fd  0x159  Clock.o [1]
   .near_func.text    ro code  0x008356   0xed  Lamp.o [1]
-  .near_func.text    ro code  0x008443   0xe0  Clock.o [1]
-  .near_func.text    ro code  0x008523   0xd0  I2C.o [1]
-  .near_func.text    ro code  0x0085f3   0x95  I2C.o [1]
-  .near_func.text    ro code  0x008688   0x8c  Clock.o [1]
-  .near_func.text    ro code  0x008714   0x88  Buttons.o [1]
-  .near_func.text    ro code  0x00879c   0x7e  long.o [4]
-  .near_func.text    ro code  0x00881a   0x59  Clock.o [1]
-  .near_func.text    ro code  0x008873   0x4b  Clock.o [1]
-  .near_func.text    ro code  0x0088be   0x41  Clock.o [1]
-  .near_func.text    ro code  0x0088ff   0x41  System.o [1]
-  .near_func.text    ro code  0x008940   0x40  Buttons.o [1]
-  .near_func.text    ro code  0x008980   0x3c  main.o [1]
-  .near_func.text    ro code  0x0089bc   0x3b  Clock.o [1]
-  .near_func.text    ro code  0x0089f7   0x35  System.o [1]
-  .near_func.text    ro code  0x008a2c   0x28  init_small.o [4]
-  .near_func.text    ro code  0x008a54   0x21  System.o [1]
-  .iar.init_table    const    0x008a75   0x12  - Linker created -
-  .near_func.text    ro code  0x008a87   0x1e  init_small.o [4]
-  .near_func.text    ro code  0x008aa5   0x18  vreg_util.o [4]
-  .near_func.text    ro code  0x008abd   0x14  init.o [4]
-  .near_func.text    ro code  0x008ad1   0x14  __dbg_xxexit.o [3]
-  .near_func.text    ro code  0x008ae5   0x13  System.o [1]
-  .near_func.text    ro code  0x008af8   0x13  cstartup.o [4]
-  .near_func.text    ro code  0x008b0b   0x11  System.o [1]
-  .near_func.text    ro code  0x008b1c   0x10  Lamp.o [1]
-  .near_func.text    ro code  0x008b2c    0x8  short.o [4]
-  Initializer bytes  const    0x008b34    0x6  <for P2-1>
-  .near_func.text    ro code  0x008b3a    0x5  cexit.o [4]
-  .near_func.text    ro code  0x008b3f    0x3  interrupt.o [4]
-  .near_func.text    ro code  0x008b42    0x3  low_level_init.o [4]
-  .near_func.text    ro code  0x008b45    0x3  exit.o [4]
-  .near_func.text    ro code  0x008b48    0x3  unhandled_exception.o [4]
-  .near_func.text    ro code  0x008b4b    0x1  Buttons.o [1]
-  .near_func.text    ro code  0x008b4c    0x1  __dbg_break.o [3]
-                            - 0x008b4d  0xacd
+  .near_func.text    ro code  0x008443   0xd0  I2C.o [1]
+  .near_func.text    ro code  0x008513   0xb9  Clock.o [1]
+  .near_func.text    ro code  0x0085cc   0x95  I2C.o [1]
+  .near_func.text    ro code  0x008661   0x8c  Clock.o [1]
+  .near_func.text    ro code  0x0086ed   0x88  Buttons.o [1]
+  .near_func.text    ro code  0x008775   0x7e  long.o [4]
+  .near_func.text    ro code  0x0087f3   0x5b  Clock.o [1]
+  .near_func.text    ro code  0x00884e   0x59  Clock.o [1]
+  .near_func.text    ro code  0x0088a7   0x49  System.o [1]
+  .near_func.text    ro code  0x0088f0   0x41  Clock.o [1]
+  .near_func.text    ro code  0x008931   0x41  System.o [1]
+  .near_func.text    ro code  0x008972   0x40  Buttons.o [1]
+  .near_func.text    ro code  0x0089b2   0x3d  main.o [1]
+  .near_func.text    ro code  0x0089ef   0x3b  Clock.o [1]
+  .near_func.text    ro code  0x008a2a   0x28  init_small.o [4]
+  .near_func.text    ro code  0x008a52   0x21  System.o [1]
+  .iar.init_table    const    0x008a73   0x12  - Linker created -
+  .near_func.text    ro code  0x008a85   0x1e  init_small.o [4]
+  .near_func.text    ro code  0x008aa3   0x19  Clock.o [1]
+  .near_func.text    ro code  0x008abc   0x18  vreg_util.o [4]
+  .near_func.text    ro code  0x008ad4   0x14  init.o [4]
+  .near_func.text    ro code  0x008ae8   0x14  __dbg_xxexit.o [3]
+  .near_func.text    ro code  0x008afc   0x13  System.o [1]
+  .near_func.text    ro code  0x008b0f   0x13  cstartup.o [4]
+  .near_func.text    ro code  0x008b22   0x11  System.o [1]
+  .near_func.text    ro code  0x008b33   0x10  Lamp.o [1]
+  .near_func.text    ro code  0x008b43    0x8  short.o [4]
+  Initializer bytes  const    0x008b4b    0x6  <for P2-1>
+  .near_func.text    ro code  0x008b51    0x5  cexit.o [4]
+  .near_func.text    ro code  0x008b56    0x3  interrupt.o [4]
+  .near_func.text    ro code  0x008b59    0x3  low_level_init.o [4]
+  .near_func.text    ro code  0x008b5c    0x3  exit.o [4]
+  .near_func.text    ro code  0x008b5f    0x3  unhandled_exception.o [4]
+  .near_func.text    ro code  0x008b62    0x1  Buttons.o [1]
+  .near_func.text    ro code  0x008b63    0x1  __dbg_break.o [3]
+                            - 0x008b64  0xae4
 
 
 *******************************************************************************
@@ -214,12 +216,12 @@ No sections matched the following patterns:
           Address   Size
           -------   ----
 Zero (__iar_zero_init2)
-    1 destination range, total size 0x3c:
-          0x000012  0x3c
+    1 destination range, total size 0x3f:
+          0x000012  0x3f
 
 Copy (__iar_copy_init2)
     1 source range, total size 0x6:
-          0x008b34   0x6
+          0x008b4b   0x6
     1 destination range, total size 0x6:
           0x00000c   0x6
 
@@ -233,13 +235,13 @@ Copy (__iar_copy_init2)
     ------                 -------  -------  -------
 C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj: [1]
     Buttons.o                  201                19
-    Clock.o                    997                19
+    Clock.o                    999                22
     I2C.o                      738                 2
     Lamp.o                     253        6       26
-    System.o                   187
-    main.o                      60
+    System.o                   207
+    main.o                      61
     ------------------------------------------------
-    Total:                   2 436        6       66
+    Total:                   2 459        6       69
 
 command line: [2]
     ------------------------------------------------
@@ -269,7 +271,7 @@ dlstm8smn.a: [4]
 
     Linker created                       18      256
 ----------------------------------------------------
-    Grand Total:             2 741      152      334
+    Grand Total:             2 764      152      337
 
 
 *******************************************************************************
@@ -278,8 +280,8 @@ dlstm8smn.a: [4]
 
 Entry                    Address   Size  Type      Object
 -----                    -------   ----  ----      ------
-.iar.init_table$$Base   0x008a75          --   Gb  - Linker created -
-.iar.init_table$$Limit  0x008a87          --   Gb  - Linker created -
+.iar.init_table$$Base   0x008a73          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x008a85          --   Gb  - Linker created -
 ?b0                     0x000000         Data  Gb  vregs.o [4]
 ?b1                     0x000001         Data  Gb  vregs.o [4]
 ?b10                    0x00000a         Data  Gb  vregs.o [4]
@@ -298,12 +300,12 @@ Entry                    Address   Size  Type      Object
 ?l0                     0x000000         Data  Gb  vregs.o [4]
 ?l1                     0x000004         Data  Gb  vregs.o [4]
 ?l2                     0x000008         Data  Gb  vregs.o [4]
-?push_w4                0x008aa5         Code  Gb  vreg_util.o [4]
-?sll16_x_x_a            0x008b2c         Code  Gb  short.o [4]
-?sll32_0x_0x_a          0x00880c         Code  Gb  long.o [4]
-?sll32_l0_l0_a          0x008809         Code  Gb  long.o [4]
-?udiv32_l0_l0_l1        0x00879c         Code  Gb  long.o [4]
-?umod32_l1_l0_l1        0x00879c         Code  Gb  long.o [4]
+?push_w4                0x008abc         Code  Gb  vreg_util.o [4]
+?sll16_x_x_a            0x008b43         Code  Gb  short.o [4]
+?sll32_0x_0x_a          0x0087e5         Code  Gb  long.o [4]
+?sll32_l0_l0_a          0x0087e2         Code  Gb  long.o [4]
+?udiv32_l0_l0_l1        0x008775         Code  Gb  long.o [4]
+?umod32_l1_l0_l1        0x008775         Code  Gb  long.o [4]
 ?w0                     0x000000         Data  Gb  vregs.o [4]
 ?w1                     0x000002         Data  Gb  vregs.o [4]
 ?w2                     0x000004         Data  Gb  vregs.o [4]
@@ -315,69 +317,72 @@ ButtonTrigger           0x000033    0x3  Data  Gb  Buttons.o [1]
 ButtonsPort             0x000012    0x6  Data  Gb  Buttons.o [1]
 CSTACK$$Base            0x000300          --   Gb  - Linker created -
 CSTACK$$Limit           0x000400          --   Gb  - Linker created -
-DotEnable               0x00004c    0x1  Data  Gb  Lamp.o [1]
+DotEnable               0x00004f    0x1  Data  Gb  Lamp.o [1]
+EXTI1                   0x008aa3   0x19  Code  Gb  Clock.o [1]
 INTVEC$$Base            0x008000          --   Gb  - Linker created -
 INTVEC$$Limit           0x008080          --   Gb  - Linker created -
-LoopLamp                0x00881a   0x59  Code  Gb  Clock.o [1]
+LoopLamp                0x00884e   0x59  Code  Gb  Clock.o [1]
 PointEnable             0x000018    0x6  Data  Gb  Lamp.o [1]
 ReadI2C                 0x008080  0x17d  Code  Gb  I2C.o [1]
-Region$$Table$$Base     0x008a75          --   Gb  - Linker created -
-Region$$Table$$Limit    0x008a87          --   Gb  - Linker created -
+Region$$Table$$Base     0x008a73          --   Gb  - Linker created -
+Region$$Table$$Limit    0x008a85          --   Gb  - Linker created -
 ValueLamp               0x000024    0x6  Data  Gb  Lamp.o [1]
-WriteI2C                0x008523   0xd0  Code  Gb  I2C.o [1]
-__DebugBreak            0x008b4c    0x1  Code  Gb  __dbg_break.o [3]
-__exit                  0x008ad1   0x14  Code  Gb  __dbg_xxexit.o [3]
-__iar_copy_init2        0x008a2c         Code  Gb  init_small.o [4]
-__iar_data_init2        0x008abd   0x14  Code  Gb  init.o [4]
-__iar_program_start     0x008af8         Code  Gb  cstartup.o [4]
+WriteI2C                0x008443   0xd0  Code  Gb  I2C.o [1]
+__DebugBreak            0x008b63    0x1  Code  Gb  __dbg_break.o [3]
+__exit                  0x008ae8   0x14  Code  Gb  __dbg_xxexit.o [3]
+__iar_copy_init2        0x008a2a         Code  Gb  init_small.o [4]
+__iar_data_init2        0x008ad4   0x14  Code  Gb  init.o [4]
+__iar_program_start     0x008b0f         Code  Gb  cstartup.o [4]
 __iar_unhandled_exception
-                        0x008b48         Code  Gb  unhandled_exception.o [4]
-__iar_zero_init2        0x008a87         Code  Gb  init_small.o [4]
+                        0x008b5f         Code  Gb  unhandled_exception.o [4]
+__iar_zero_init2        0x008a85         Code  Gb  init_small.o [4]
 __intvec                0x008000         Data  Gb  interrupt.o [4]
-__low_level_init        0x008b42    0x3  Code  Gb  low_level_init.o [4]
-_exit                   0x008b3a         Code  Gb  cexit.o [4]
-bcdToDecimal            0x008ae5   0x13  Code  Gb  System.o [1]
-countDel                0x000048    0x1  Data  Gb  Clock.o [1]
-countDelDs              0x00004b    0x1  Data  Gb  Clock.o [1]
-countDelInc             0x00003a    0x2  Data  Gb  Clock.o [1]
-countDelPressed         0x000038    0x2  Data  Gb  Clock.o [1]
-countLamp               0x00004d    0x1  Data  Gb  Lamp.o [1]
-countPosit              0x000040    0x1  Data  Gb  Clock.o [1]
-counterButtons          0x00003e    0x1  Data  Gb  Buttons.o [1]
-counterDigis            0x000049    0x1  Data  Gb  Clock.o [1]
-decimalToBcd            0x008a54   0x21  Code  Gb  System.o [1]
-decrementTime           0x0089bc   0x3b  Code  Gb  Clock.o [1]
-delCountBlink           0x000036    0x2  Data  Gb  Clock.o [1]
+__low_level_init        0x008b59    0x3  Code  Gb  low_level_init.o [4]
+_exit                   0x008b51         Code  Gb  cexit.o [4]
+_interrupt_5            0x008aa3         Code  Gb  Clock.o [1]
+bcdToDecimal            0x008afc   0x13  Code  Gb  System.o [1]
+countDel                0x00004b    0x1  Data  Gb  Clock.o [1]
+countDelInc             0x00003d    0x2  Data  Gb  Clock.o [1]
+countDelPressed         0x00003b    0x2  Data  Gb  Clock.o [1]
+countLamp               0x000050    0x1  Data  Gb  Lamp.o [1]
+countPosit              0x000043    0x1  Data  Gb  Clock.o [1]
+counterButtons          0x000041    0x1  Data  Gb  Buttons.o [1]
+counterDigis            0x00004c    0x1  Data  Gb  Clock.o [1]
+decimalToBcd            0x008a52   0x21  Code  Gb  System.o [1]
+decrementTime           0x0089ef   0x3b  Code  Gb  Clock.o [1]
+delCountBlink           0x000039    0x2  Data  Gb  Clock.o [1]
 delCountButtOff         0x000030    0x3  Data  Gb  Buttons.o [1]
 delCountButtOn          0x00002d    0x3  Data  Gb  Buttons.o [1]
 digisEnable             0x00001e    0x6  Data  Gb  Lamp.o [1]
-exit                    0x008b45    0x3  Code  Gb  exit.o [4]
-hour                    0x000043    0x1  Data  Gb  Clock.o [1]
-incrementTime           0x0088be   0x41  Code  Gb  Clock.o [1]
-initButtons             0x008940   0x40  Code  Gb  Buttons.o [1]
-initClock               0x008b0b   0x11  Code  Gb  System.o [1]
-initDs1307              0x008873   0x4b  Code  Gb  Clock.o [1]
-initGPIO                0x0089f7   0x35  Code  Gb  System.o [1]
-initI2C                 0x0085f3   0x95  Code  Gb  I2C.o [1]
-initLamp                0x008b1c   0x10  Code  Gb  Lamp.o [1]
-initTimers              0x0088ff   0x41  Code  Gb  System.o [1]
-isLoopLamp              0x000045    0x1  Data  Gb  Clock.o [1]
-isMenu                  0x00003f    0x1  Data  Gb  Clock.o [1]
+exit                    0x008b5c    0x3  Code  Gb  exit.o [4]
+hour                    0x000046    0x1  Data  Gb  Clock.o [1]
+incrementTime           0x0088f0   0x41  Code  Gb  Clock.o [1]
+initButtons             0x008972   0x40  Code  Gb  Buttons.o [1]
+initClock               0x008b22   0x11  Code  Gb  System.o [1]
+initDs1307              0x0087f3   0x5b  Code  Gb  Clock.o [1]
+initGPIO                0x0088a7   0x49  Code  Gb  System.o [1]
+initI2C                 0x0085cc   0x95  Code  Gb  I2C.o [1]
+initLamp                0x008b33   0x10  Code  Gb  Lamp.o [1]
+initTimers              0x008931   0x41  Code  Gb  System.o [1]
+isLoopLamp              0x000048    0x1  Data  Gb  Clock.o [1]
+isMenu                  0x000042    0x1  Data  Gb  Clock.o [1]
+isReadClock             0x00004e    0x1  Data  Gb  Clock.o [1]
 lampAnodePosit          0x00000c    0x6  Data  Gb  Lamp.o [1]
-main                    0x008980   0x3c  Code  Gb  main.o [1]
-minute                  0x000042    0x1  Data  Gb  Clock.o [1]
-numberLoop              0x00004a    0x1  Data  Gb  Clock.o [1]
-oldHour                 0x000047    0x1  Data  Gb  Clock.o [1]
-oldMinute               0x000046    0x1  Data  Gb  Clock.o [1]
-onClickButton           0x008688   0x8c  Code  Gb  Clock.o [1]
-processButtons          0x008714   0x88  Code  Gb  Buttons.o [1]
-processClock            0x008443   0xe0  Code  Gb  Clock.o [1]
+main                    0x0089b2   0x3d  Code  Gb  main.o [1]
+minute                  0x000045    0x1  Data  Gb  Clock.o [1]
+numberLoop              0x00004d    0x1  Data  Gb  Clock.o [1]
+oldHour                 0x00004a    0x1  Data  Gb  Clock.o [1]
+oldMinute               0x000049    0x1  Data  Gb  Clock.o [1]
+onClickButton           0x008661   0x8c  Code  Gb  Clock.o [1]
+processButtons          0x0086ed   0x88  Code  Gb  Buttons.o [1]
+processClock            0x008513   0xb9  Code  Gb  Clock.o [1]
 processDisplay          0x008356   0xed  Code  Gb  Lamp.o [1]
 processMenu             0x0081fd  0x159  Code  Gb  Clock.o [1]
-seconds                 0x000041    0x1  Data  Gb  Clock.o [1]
-tickDelTime             0x00003c    0x2  Data  Gb  I2C.o [1]
-triggerBLink            0x000044    0x1  Data  Gb  Clock.o [1]
-unPressedButton         0x008b4b    0x1  Code  Wk  Buttons.o [1]
+seconds                 0x000044    0x1  Data  Gb  Clock.o [1]
+tickDelTime             0x00003f    0x2  Data  Gb  I2C.o [1]
+triggerBLink            0x000047    0x1  Data  Gb  Clock.o [1]
+unPressedButton         0x008b62    0x1  Code  Wk  Buttons.o [1]
+vals                    0x000036    0x3  Data  Gb  Clock.o [1]
 
 
 [1] = C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\Nixe_clock_V2.0\Debug\Obj
@@ -385,9 +390,9 @@ unPressedButton         0x008b4b    0x1  Code  Wk  Buttons.o [1]
 [3] = dbgstm8smd.a
 [4] = dlstm8smn.a
 
-  2 741 bytes of readonly  code memory
+  2 764 bytes of readonly  code memory
     152 bytes of readonly  data memory
-    334 bytes of readwrite data memory
+    337 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

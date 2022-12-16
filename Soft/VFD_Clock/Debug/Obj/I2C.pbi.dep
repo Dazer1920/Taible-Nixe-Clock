@@ -1,0 +1,6 @@
+I2C.pbi: \
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\VFD_Clock\rsc\I2C.c \
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\VFD_Clock\inc\I2C.h \
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\VFD_Clock\inc/System.h \
+  C:\Users\Dazer\Documents\GitHub\Taible-Nixe-Clock\Soft\VFD_Clock\inc/stm8s.h \
+  C:\Program\ Files\ (x86)\IAR\ Systems\Embedded\ Workbench\ 8.3\stm8\inc\c\intrinsics.h

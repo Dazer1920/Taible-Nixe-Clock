@@ -14,9 +14,9 @@ uint8_t countPosit = 0;
 uint8_t seconds = 0, minute = 0, hour = 0;
 
 void initDs1307() {
-  uint8_t vals[3];
+  uint8_t vals[8];
   Enable init = OFF;
-  ReadI2C(0xd0, 0, vals, 3);
+  ReadI2C(0xd0, 0, vals, 8);
   
   if(vals[0] & (1 << 7)) {
     vals[0] &= ~(1 << 7);
@@ -27,8 +27,14 @@ void initDs1307() {
     vals[2] &= ~(1 << 6);
     init = ON;
   }
+    
+  if(!(vals[7] & (1 << 7)) || !(vals[7] & (1 << 4)) || (vals[7] & (1 << 0)) || (vals[7] & (1 << 1))) {
+    vals[7] = 0;
+    vals[7] |= (1 << 4) | (1 << 7);
+    init = ON;
+  }
   
-  if(init) WriteI2C(0xd0, 0, vals, 3);
+  if(init) WriteI2C(0xd0, 0, vals, 8);
 }
 
 uint16_t delCountBlink = 0, countDelPressed, countDelInc;
@@ -175,23 +181,30 @@ void processMenu() {
   } else countDelPressed = 0;
 }
 
-uint8_t countDelDs = 0;
+Enable isReadClock = OFF;
+#pragma vector = 5
+__interrupt void EXTI1(){
+  if(isMenu == ON) return;
+  
+  if(GPIOA->IDR & (1 << 1)) {
+    DotEnable = ON;
+    isReadClock = ON;
+  } else {
+    DotEnable = OFF;
+  }
+}
 
+uint8_t countDelDs = 0;
+uint8_t oldSeconds = 0;
+uint8_t vals[3];
 void processClock() {
   if(isMenu == ON) {
     processMenu();
   } else {
-    if(++delCountBlink >= 500) {
-      delCountBlink = 0;
-      DotEnable = (DotEnable == ON)? OFF : ON;
-    }
-    
-    if(++countDelDs >= 200) {
-      countDelDs = 0;
+    if(isReadClock) {
+      isReadClock = OFF;
       
-      uint8_t vals[3];
       ReadI2C(0xd0, 0, vals, 3);
-      
       seconds = bcdToDecimal(vals[0]);
       minute = bcdToDecimal(vals[1]);
       hour = bcdToDecimal(vals[2]);
