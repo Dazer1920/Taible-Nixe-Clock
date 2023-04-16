@@ -23,13 +23,12 @@ uint16_t tickDelTime = 0;
 
 #define timeOut(ms, flag) \
   tickDelTime = 0; \
-  while(1) { \
+  while(flag) { \
     if(TIM4->SR1 & TIM4_SR1_UIF) { \
       TIM4->SR1 &= ~TIM4_SR1_UIF; \
       tickDelTime++; \
+      if(tickDelTime == ms) break; \
     } \
-    if(tickDelTime == ms) break; \
-    if(!flag) break; \
   }
 
 void i2c_start() {
@@ -81,9 +80,14 @@ void ReadI2C(uint8_t address, uint8_t reg_addr, uint8_t *data, uint8_t length){
   i2c_start();
   i2c_write_addr(address + 1);
   while(length-- > 1) {
-    *data++ = i2c_read(1);
+    I2C->CR2 |= I2C_CR2_ACK;
+    timeOut(2, !(I2C->SR1 & I2C_SR1_RXNE));
+    *data++ = I2C->DR;
   }
   
-  *data++ = i2c_read(0);
+  I2C->CR2 &= ~I2C_CR2_ACK;
+  timeOut(2, !(I2C->SR1 & I2C_SR1_RXNE));
+  *data++ = I2C->DR;
+  
   i2c_stop();
 }

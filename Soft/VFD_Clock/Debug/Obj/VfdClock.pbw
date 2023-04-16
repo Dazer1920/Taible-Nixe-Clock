@@ -22282,7 +22282,7 @@
     "scope": null
   },
   {
-    "ID": "c:I2C.c@541@macro@timeOut",
+    "ID": "c:I2C.c@542@macro@timeOut",
     "What": "MacroDef",
     "defdec": "Def",
     "display": "timeOut",
@@ -22302,7 +22302,7 @@
     "display": "void i2c_start(void)",
     "location": {
       "column": "6",
-      "line": "35",
+      "line": "34",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\VFD_Clock\\rsc\\I2C.c"
     },
     "name": "i2c_start",
@@ -22316,7 +22316,7 @@
     "display": "void i2c_stop(void)",
     "location": {
       "column": "6",
-      "line": "40",
+      "line": "39",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\VFD_Clock\\rsc\\I2C.c"
     },
     "name": "i2c_stop",
@@ -22330,7 +22330,7 @@
     "display": "void i2c_write(uint8_t)",
     "location": {
       "column": "6",
-      "line": "45",
+      "line": "44",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\VFD_Clock\\rsc\\I2C.c"
     },
     "name": "i2c_write",
@@ -22344,7 +22344,7 @@
     "display": "uint8_t i2c_read(uint8_t)",
     "location": {
       "column": "9",
-      "line": "50",
+      "line": "49",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\VFD_Clock\\rsc\\I2C.c"
     },
     "name": "i2c_read",
@@ -22358,7 +22358,7 @@
     "display": "void i2c_write_addr(uint8_t)",
     "location": {
       "column": "6",
-      "line": "58",
+      "line": "57",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\VFD_Clock\\rsc\\I2C.c"
     },
     "name": "i2c_write_addr",
@@ -22372,7 +22372,7 @@
     "display": "void WriteI2C(uint8_t, uint8_t, uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "65",
+      "line": "64",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\VFD_Clock\\rsc\\I2C.c"
     },
     "name": "WriteI2C",
@@ -22386,7 +22386,7 @@
     "display": "void ReadI2C(uint8_t, uint8_t, uint8_t *, uint8_t)",
     "location": {
       "column": "6",
-      "line": "75",
+      "line": "74",
       "path": "C:\\Users\\Dazer\\Documents\\GitHub\\Taible-Nixe-Clock\\Soft\\VFD_Clock\\rsc\\I2C.c"
     },
     "name": "ReadI2C",
